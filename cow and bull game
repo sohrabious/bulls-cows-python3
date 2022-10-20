@@ -1,0 +1,42 @@
+from itertools import count
+import random
+
+print("Welcome to the game")
+the_num = random.randint(1000, 9999)
+num = str(the_num)
+#print(num)
+x = input("enter your guess to start: ")
+if len(x) != 4:
+    x = input("the number you guess must be 4 digits, please try agian: ")
+    
+    
+
+
+
+def bull_cows(num , x):
+    bulls = 0
+    cows = 0
+    if num == x:
+        print("that's a perfect guess")
+    else:
+        while x!= num:
+        
+            for i in range(0, 4):
+            
+                if x[i] == num[i]:
+                    bulls = bulls + 1
+                elif x[i] in num:
+                    #i used count() here in case any digit is repeated
+                    cows= cows + num.count(x[i])  
+        
+            print("the number of bulls is: ",bulls)
+            print("the number of cows is: ",cows)      
+            x =  input("let's enter another num: ")
+            if x == num :
+                print("well done, u found the number")
+            bulls = 0
+            cows = 0   
+            
+
+bull_cows(num , x)
+            
