@@ -13,7 +13,7 @@ if len(x) != 4:
 
 
 
-def bull_cows(num , x):
+def bulls_cows(num , x):
     bulls = 0
     cows = 0
     if num == x:
@@ -38,5 +38,5 @@ def bull_cows(num , x):
             cows = 0   
             
 
-bull_cows(num , x)
+bulls_cows(num , x)
             
